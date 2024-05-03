@@ -19,7 +19,7 @@ let initialDicePositions: [SCNVector3] = [
     SCNVector3(0, 0, 0.5)
 ]
 
-struct DiceView: UIViewRepresentable {
+public struct DiceView: UIViewRepresentable {
     let scene: SCNScene
     let diceModel : DiceModel
     
@@ -190,11 +190,11 @@ struct DiceView: UIViewRepresentable {
         return floorNode
     }
     
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         return Coordinator(scene: scene, diceModel: diceModel)
     }
     
-    func makeUIView(context: Context) -> SCNView {
+    public func makeUIView(context: Context) -> SCNView {
         
         let scnView = SCNView()
         
@@ -211,12 +211,12 @@ struct DiceView: UIViewRepresentable {
         return scnView
     }
     
-    func updateUIView(_ scnView: SCNView, context: Context) {
+    public func updateUIView(_ scnView: SCNView, context: Context) {
         context.coordinator.handleRoll(scnView: scnView)
         context.coordinator.handleArrange(scnView: scnView)
     }
     
-    class Coordinator : NSObject, SCNPhysicsContactDelegate {
+    public class Coordinator : NSObject, SCNPhysicsContactDelegate {
         let scene: SCNScene
         var diceNodes: [SCNNode]?
         var direction: Float = 1.0 // Variable to alternate the direction of the force
@@ -400,7 +400,7 @@ struct DiceView: UIViewRepresentable {
             return value
         }
         
-        func physicsWorld(_ world: SCNPhysicsWorld, didUpdate contact: SCNPhysicsContact) {
+        public func physicsWorld(_ world: SCNPhysicsWorld, didUpdate contact: SCNPhysicsContact) {
             
             //if let speed = diceNode?.physicsBody?.velocity.length()  {
             guard let diceNodes = diceNodes else {
