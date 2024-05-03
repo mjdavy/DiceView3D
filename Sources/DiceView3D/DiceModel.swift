@@ -26,7 +26,7 @@ public class DiceModel {
     var backgroundColor : UIColor
     var selectedColor : UIColor
     
-    init(initialValues: [Int], 
+    public init(initialValues: [Int], 
          faceScheme: FaceRenderingScheme = .namedImage,
          faces: [String] = (1...6).map { "dice\($0)" },
          foregroundColor : UIColor = .black,
