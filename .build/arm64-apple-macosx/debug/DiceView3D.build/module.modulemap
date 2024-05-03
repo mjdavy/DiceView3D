@@ -1,0 +1,4 @@
+module DiceView3D {
+    header "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3D.build/DiceView3D-Swift.h"
+    requires objc
+}
