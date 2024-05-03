@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3DTests.build/master.swiftdeps"
+  },
+  "/Users/martindavy/source/repos/swift/DiceView3D/Tests/DiceView3DTests/DiceView3DTests.swift": {
+    "dependencies": "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3DTests.build/DiceView3DTests.d",
+    "object": "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3DTests.build/DiceView3DTests.swift.o",
+    "swiftmodule": "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3DTests.build/DiceView3DTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/martindavy/source/repos/swift/DiceView3D/.build/arm64-apple-macosx/debug/DiceView3DTests.build/DiceView3DTests.swiftdeps"
+  }
+}

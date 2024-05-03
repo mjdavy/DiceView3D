@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-enum FaceRenderingScheme {
+public enum FaceRenderingScheme {
     case namedImage
     case string
 }
 
 @Observable
-class DiceModel {
+public class DiceModel {
     var dice: [Die]
     var roll = false
     var canSelectDice = false
