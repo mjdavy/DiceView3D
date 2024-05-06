@@ -17,7 +17,7 @@ public enum FaceRenderingScheme {
 public class DiceModel {
     var dice: [Die]
     
-    var onRollComplete: (([Int]) -> Void)? // Closure to be executed when the dice roll completes
+    
     var faceScheme: FaceRenderingScheme
     var faces: [String]
     var foregroundColor : UIColor
@@ -28,6 +28,7 @@ public class DiceModel {
     public var roll = false
     public var canSelectDice = false
     public var arrangeDice = false
+    public var onRollComplete: (([Int]) -> Void)? // Closure to be executed when the dice roll completes
     
     public var values: [Int] {
         return dice.map { $0.value }
