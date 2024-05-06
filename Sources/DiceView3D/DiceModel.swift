@@ -16,15 +16,26 @@ public enum FaceRenderingScheme {
 @Observable
 public class DiceModel {
     var dice: [Die]
-    var roll = false
-    var canSelectDice = false
-    var arrangeDice = false
+    
     var onRollComplete: (([Int]) -> Void)? // Closure to be executed when the dice roll completes
     var faceScheme: FaceRenderingScheme
     var faces: [String]
     var foregroundColor : UIColor
     var backgroundColor : UIColor
     var selectedColor : UIColor
+    
+    // Public interface
+    public var roll = false
+    public var canSelectDice = false
+    public var arrangeDice = false
+    
+    public var values: [Int] {
+        return dice.map { $0.value }
+    }
+    
+    public var numberOfDice : Int {
+        dice.count
+    }
     
     public init(initialValues: [Int], 
          faceScheme: FaceRenderingScheme = .namedImage,
@@ -49,14 +60,6 @@ public class DiceModel {
         self.foregroundColor = foregroundColor
         self.backgroundColor = backgroundColor
         self.selectedColor = selectedColor
-    }
-    
-    var values: [Int] {
-        return dice.map { $0.value }
-    }
-    
-    var numberOfDice : Int {
-        dice.count
     }
     
     func getDie(byName dieName: String) -> Die? {

@@ -23,7 +23,7 @@ public struct DiceView: UIViewRepresentable {
     let scene: SCNScene
     let diceModel : DiceModel
     
-    init(diceModel: DiceModel) {
+    public init(diceModel: DiceModel) {
         self.scene = DiceView.createDiceScene(diceModel)
         self.diceModel = diceModel
     }
