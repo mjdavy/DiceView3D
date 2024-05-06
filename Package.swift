@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "DiceView3D",
     platforms: [
-        .iOS(.v17) // This line restricts the package to iOS 13 and later
+        .iOS(.v17) // This line restricts the package to iOS 17 and later
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
